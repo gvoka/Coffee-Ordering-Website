@@ -22,3 +22,7 @@ Smooth Navigation – Scroll-based transitions for a seamless user experience.
 📌 Notes
 This is a frontend-only project. No backend or database integration is included.
 Designed for educational/demo purposes and can be expanded with user authentication, cart system, and backend functionality.
+
+ 🌐 Live Demo
+You can view the working demo of this project here:  
+👉 https://gvoka.github.io/Coffee-Ordering-Website/
