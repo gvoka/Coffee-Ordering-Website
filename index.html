@@ -1,0 +1,171 @@
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyCafé - Handcrafted Coffee & Premium Beverages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+       <div class="logo-container">
+          <img src="images/cafe.png" alt="MyCafé Logo" class="nav-logo">
+        <h1>MyCafé</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-content">
+      <h2>Experience the Art of Coffee</h2>
+      <p>Handcrafted beverages in a warm, inviting atmosphere</p>
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>At MyCafé, we believe that great coffee is an art form. Founded in 2015, our mission has been to serve the highest quality coffee in an atmosphere that feels like home.</p>
+          <p>We source our beans ethically from small farms around the world, and each cup is carefully prepared by our skilled baristas who are passionate about their craft.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHxhZXN0aGV0aWMlMjBjb2ZmZWUlMjBzaG9wJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzQ3OTI1NzkyfDA&ixlib=rb-4.1.0&fit=fillmax&h=600&w=800" alt="Cozy coffee shop interior">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-image">
+            <img src="images/cappuccino.jpg" alt="Cappuccino">
+          </div>
+          <h3>Cappuccino</h3>
+          <p>Espresso with steamed milk and a deep layer of foam</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-image">
+            <img src="images/latte.jpg" alt="Latte">
+          </div>
+          <h3>Latte</h3>
+          <p>Espresso with a generous amount of steamed milk and light foam</p>
+        </div>
+        <div class="menu-item">
+           <div class="menu-image">
+            <img src= "images/mocha.jpg" alt="Mocha">
+            
+          </div>
+          <h3>Mocha</h3>
+          <p>Espresso with chocolate, steamed milk, and whipped cream</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-image">
+            <img src="images/americano.jpg" alt="Americano">
+          </div>
+          <h3>Americano</h3>
+          <p>Espresso diluted with hot water for a milder flavor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="container">
+      <h2>Create Your Order</h2>
+      <div class="order-container">
+        <form id="order-form">
+          <div class="form-group">
+            <label for="drink">Select Your Drink</label>
+            <select id="drink" required>
+              <option value="">Choose a drink...</option>
+              <option value="espresso" data-price="3.50">Espresso ($3.50)</option>
+              <option value="cappuccino" data-price="4.50">Cappuccino ($4.50)</option>
+              <option value="latte" data-price="4.75">Latte ($4.75)</option>
+              <option value="mocha" data-price="5.25">Mocha ($5.25)</option>
+              <option value="americano" data-price="4.00">Americano ($4.00)</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="size">Select Size</label>
+            <select id="size" required>
+              <option value="">Choose a size...</option>
+              <option value="small" data-price-factor="1">Small</option>
+              <option value="medium" data-price-factor="1.25">Medium (+25%)</option>
+              <option value="large" data-price-factor="1.5">Large (+50%)</option>
+            </select>
+          </div>
+          
+          <div class="form-group extras">
+            <label>Extras</label>
+            <div class="checkbox-group">
+              <div class="checkbox">
+                <input type="checkbox" id="milk" data-price="0.50">
+                <label for="milk">Extra Milk (+$0.50)</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="sugar" data-price="0.25">
+                <label for="sugar">Extra Sugar (+$0.25)</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="vanilla" data-price="0.75">
+                <label for="vanilla">Vanilla Syrup (+$0.75)</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1" value="1" required>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="btn">Calculate Total</button>
+            <button type="submit" class="btn">Order</button>
+
+          </div>
+        </form>
+        
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div id="order-details">
+            <p>Select your drink and options to see the details</p>
+          </div>
+          <div class="total">
+            <h4>Total Price:</h4>
+            <p id="total-price">$0.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="logo-container">
+       <img src="images/cafe.png" alt="MyCafé Logo" class="logo-image">
+        <h3>MyCafé</h3>
+      </div>
+      <p>&copy; 2023 MyCafé. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  
